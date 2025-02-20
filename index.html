@@ -11,12 +11,16 @@
 
 <div class="cat-img" id="p">
     <img class="p" onmousedown="clicked()" src="imgs/p.png" alt="POPCAT">
-    <img class="op" src="imgs/op.png" alt="POPCAT">
+    <img class="op" onmouseup="notclicked()" src="imgs/op.png" alt="POPCAT">
 </div>
 <script>
     function clicked(){
-        document.getElementsByClassName("p").style.display = "none";
-        document.getElementsByClassName("op").style.display = "block";
+        document.getElementsByClassName("p")[0].style.display = "none";
+        document.getElementsByClassName("op")[0].style.display = "block";
+    }
+    function notclicked(){
+        document.getElementsByClassName("op")[0].style.display = "none";
+        document.getElementsByClassName("p")[0].style.display = "block";
     }
 </script>
 </body>
