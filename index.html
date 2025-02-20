@@ -10,8 +10,14 @@
 <img class="title" src="imgs/popcat.svg" alt="POPCAT">
 
 <div class="cat-img" id="p">
-    <img class="p" src="imgs/p.png" alt="POPCAT">
+    <img class="p" onmousedown="clicked()" src="imgs/p.png" alt="POPCAT">
     <img class="op" src="imgs/op.png" alt="POPCAT">
 </div>
+<script>
+    function clicked(){
+        document.getElementsByClassName("p").style.display = "none";
+        document.getElementsByClassName("op").style.display = "block";
+    }
+</script>
 </body>
 </html>
